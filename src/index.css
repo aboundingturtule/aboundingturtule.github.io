@@ -1,0 +1,25 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&family=Georgia:ital,wght@0,400;1,400&display=swap');
+
+@theme {
+  --font-sans: "Helvetica Neue", Arial, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+  --font-serif: "Georgia", serif;
+  
+  --color-bg: #0A0A0B;
+  --color-card-bg: #161618;
+  --color-accent: #C5A880;
+  --color-text-main: #E2E2E2;
+  --color-text-dim: #888888;
+  --color-line: rgba(255, 255, 255, 0.1);
+}
+
+@layer base {
+  body {
+    @apply bg-bg text-text-main font-sans antialiased;
+  }
+}
+
+.technical-grid {
+  display: none; /* Removing previous grid background for cleaner luxury feel */
+}
