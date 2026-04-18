@@ -2,12 +2,13 @@ import { motion } from 'motion/react';
 import { Link } from 'react-router-dom';
 import { Project } from '../types';
 import { ChevronRight } from 'lucide-react';
+import React from 'react';
 
 interface ProjectCardProps {
   project: Project;
 }
 
-export default function ProjectCard({ project }: ProjectCardProps) {
+const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
   return (
     <Link to={`/project/${project.id}`} className="group block">
       <motion.div 
@@ -55,5 +56,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
       </motion.div>
     </Link>
   );
-}
+};
+
+export default ProjectCard;
 
